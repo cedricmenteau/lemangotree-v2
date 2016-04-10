@@ -68,48 +68,14 @@ header {
     padding-top: 30px;
     text-align: center; }
     header .header-content h1 {
+      font-size: 1.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
       color: #fff; }
       header .header-content h1 small {
         text-transform: uppercase;
         font-size: 1.4rem;
         letter-spacing: 0.1rem; }
-
-nav {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  top: 0;
-  transition: all 0.3s ease-in-out; }
-  nav a, nav a:visited, nav a:focus {
-    color: #333;
-    font-family: 'brandon_grotesquethin';
-    font-weight: 600; }
-  nav a:hover {
-    color: #333; }
-  nav ul {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    max-width: 960px;
-    list-style: none;
-    height: 60px;
-    align-items: center; }
-    nav ul li {
-      flex-basis: 15%;
-      margin-bottom: 0;
-      text-align: center;
-      transition: all 0.3s ease-in-out; }
-    nav ul .nav-logo {
-      display: none; }
-      nav ul .nav-logo img {
-        height: 45px;
-        transition: all 0.3s ease-in-out; }
-
-nav.scrolled {
-  background-color: #fff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
-  nav.scrolled .nav-logo {
-    display: block; }
 
 h2 {
   position: relative;
@@ -253,12 +219,6 @@ section#origins {
         padding-bottom: 101.5%;
         background-size: cover;
         background-repeat: no-repeat; }
-    section#products .block-1 .image-1:after,
-    section#origins .block-1 .image-1:after {
-      background-image: url("../images/mozaic_1/product_1.jpg"); }
-    section#products .block-1 .image-2:after,
-    section#origins .block-1 .image-2:after {
-      background-image: url("../images/mozaic_1/product_2.jpg"); }
   section#products .block-2,
   section#origins .block-2 {
     display: flex;
@@ -272,7 +232,6 @@ section#origins {
         content: "";
         display: block;
         padding-bottom: 100%;
-        background-image: url("../images/mozaic_1/product_3.jpg");
         background-size: cover;
         background-repeat: no-repeat; }
     section#products .block-2 .block-3,
@@ -287,7 +246,6 @@ section#origins {
           content: "";
           display: block;
           padding-bottom: 100%;
-          background-image: url("../images/mozaic_1/product_4.jpg");
           background-size: cover;
           background-repeat: no-repeat; }
       section#products .block-2 .block-3 .prestations-content,
@@ -300,12 +258,56 @@ section#origins {
         width: 40%;
         text-align: center; }
 
+section#products .block-1 .image-1:after {
+  background-image: url("../images/mozaic_1/product_1.jpg"); }
+section#products .block-1 .image-2:after {
+  background-image: url("../images/mozaic_1/product_2.jpg"); }
+section#products .block-2 .image-3:after {
+  background-image: url("../images/mozaic_1/product_3.JPG"); }
+section#products .block-3 .image-4:after {
+  background-image: url("../images/mozaic_1/product_4.JPG"); }
+
+section#origins .block-1 .image-1:after {
+  background-image: url("../images/mozaic_items/salade.jpg"); }
+section#origins .block-1 .image-2:after {
+  background-image: url("../images/mozaic_items/pain.jpg"); }
+section#origins .block-2 .image-3:after {
+  background-image: url("../images/mozaic_items/pain.jpg"); }
+section#origins .block-3 .image-4:after {
+  background-image: url("../images/mozaic_items/salade.jpg"); }
+
 section#menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 80px 0 40px; }
+  section#menu .icon-svg {
+    padding-bottom: 30px;
+    height: 40px;
+    width: 80px; }
+  section#menu a {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: #555;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box; }
+    section#menu a:hover {
+      color: #333;
+      border-color: #888;
+      outline: 0; }
 
 section#origins {
   display: flex;
@@ -1241,6 +1243,43 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+nav {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  transition: all 0.3s ease-in-out; }
+  nav a, nav a:visited, nav a:focus {
+    color: #333;
+    font-family: 'brandon_grotesquethin';
+    font-weight: 600; }
+  nav a:hover {
+    color: #333; }
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 960px;
+    list-style: none;
+    height: 60px;
+    align-items: center; }
+    nav ul li {
+      flex-basis: 15%;
+      margin-bottom: 0;
+      text-align: center;
+      transition: all 0.3s ease-in-out; }
+    nav ul .nav-logo {
+      display: none; }
+      nav ul .nav-logo img {
+        height: 45px;
+        transition: all 0.3s ease-in-out; }
+
+nav.scrolled {
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
+  nav.scrolled .nav-logo {
+    display: block; }
+
 /*
  * We are hiding the invisible nav outside the screen
  * so we need to avoid the horizontal scroll

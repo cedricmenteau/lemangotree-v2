@@ -1,6 +1,7 @@
 // SMOOTH SCROLL
 smoothScroll.init();
 
+// TOGGLE NAVBAR STATE ON SCROLL
 $(document).ready(function(){
   var scroll_start = 0;
   var startchange = $('.nav');

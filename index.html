@@ -55,8 +55,12 @@ layout: default
     <h2>Retrouvez l'intégralité de notre carte</h2>
     <!-- SVG Divider -->
     {% include svg/separator.html %}
-    {% include svg/watermelons.html %}
-    <button>Notre menu</button>
+    <div class="illustrations">
+      {% include svg/watermelons.html %}
+      {% include svg/mixer.html %}
+      {% include svg/bowl.html %}
+    </div>
+    <a href="{{ site.github.url }}/menu" alt="">Notre menu</a>
   </section>
 
   <section id="origins">
@@ -90,6 +94,9 @@ layout: default
   </section>
 
   <section id="contact">
+    <h2>Retrouvez-nous !</h2>
+    <!-- SVG Divider -->
+    {% include svg/separator.html %}
 
   www.lemangotree.com
 contact@lemangotree.com
@@ -103,7 +110,7 @@ Suive Le Mango Tree sur tous les réseau sociaux.
   </section>
 
   <section id="instagram">
-    <h2>Retrouvez-nous sur Instagram !</h2>
+    <h2>Suivez-nous sur Instagram !</h2>
     <!-- SVG Divider -->
     {% include svg/separator.html %}
     <p>@lemangotree</p>
