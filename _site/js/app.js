@@ -1,22 +1,26 @@
-// Initialize OKayNav
-var navigation = $('#nav-main').okayNav({
-  parent : '', // will call nav's parent() by default
-  toggle_icon_class : 'okayNav__menu-toggle',
-  toggle_icon_content: '<span /><span /><span />',
-  align_right: true, // If false, the menu and the kebab icon will be on the left
-  swipe_enabled: true, // If true, you'll be able to swipe left/right to open the navigation
-  threshold: 50, // Nav will auto open/close if swiped >= this many percent
-  beforeOpen : function() {}, // Will trigger before the nav gets opened
-  afterOpen : function() {}, // Will trigger after the nav gets opened
-  beforeClose : function() {}, // Will trigger before the nav gets closed
-  afterClose : function() {}, // Will trigger after the nav gets closed
-  itemHidden: function() {}, // Will trigger after an item moves to the hidden navigation
-  itemDisplayed: function() {} // Will trigger after an item moves to the visible navigation
+// SMOOTH SCROLL
+smoothScroll.init();
+
+$(document).ready(function(){
+  var scroll_start = 0;
+  var startchange = $('.nav');
+  var offset = startchange.offset();
+  $(document).scroll(function() {
+    scroll_start = $(this).scrollTop();
+    if(scroll_start > offset.top) {
+      $('.nav').addClass('scrolled');
+      $('.container-logo').addClass('scrolled');
+    } else {
+      $('.nav').removeClass('scrolled');
+      $('.container-logo').removeClass('scrolled');
+    }
+  });
 });
 
 // SLICK
 $('.carousel').slick({
   dots: true,
+  arrows: false,
   autoPlay: false,
   speed: 700,
   initialSlide: 2,

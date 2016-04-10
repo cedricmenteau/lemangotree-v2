@@ -26,9 +26,11 @@ header {
   display: flex;
   position: relative;
   box-sizing: border-box;
-  padding-top: 180px;
+  padding-top: 145px;
   width: 100%;
   height: 620px; }
+  header #item {
+    stroke: #fff; }
   header:after {
     content: "";
     position: absolute;
@@ -37,7 +39,7 @@ header {
     top: 0;
     right: 0;
     bottom: 0;
-    left: 9;
+    left: 0;
     background-image: url("../images/header.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -48,26 +50,66 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
     background-color: #fff;
     border-radius: 50%;
     height: 220px;
-    width: 220px; }
+    width: 220px;
+    transition: all 0.3s ease-in-out; }
     header .container-logo img {
       height: 200px; }
+  header .container-logo.scrolled {
+    opacity: 0; }
+  header .header-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 30px;
+    text-align: center; }
+    header .header-content h1 {
+      color: #fff; }
+      header .header-content h1 small {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem; }
 
 nav {
   position: fixed;
   z-index: 2;
+  width: 100%;
   top: 0;
-  right: 20px; }
+  transition: all 0.3s ease-in-out; }
   nav a, nav a:visited, nav a:focus {
-    color: #fff;
-    font-weight: 600;
-    font-family: 'brandon_grotesquemedium'; }
+    color: #333;
+    font-family: 'brandon_grotesquethin';
+    font-weight: 600; }
   nav a:hover {
     color: #333; }
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 960px;
+    list-style: none;
+    height: 60px;
+    align-items: center; }
+    nav ul li {
+      flex-basis: 15%;
+      margin-bottom: 0;
+      text-align: center;
+      transition: all 0.3s ease-in-out; }
+    nav ul .nav-logo {
+      display: none; }
+      nav ul .nav-logo img {
+        height: 45px;
+        transition: all 0.3s ease-in-out; }
+
+nav.scrolled {
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
+  nav.scrolled .nav-logo {
+    display: block; }
 
 h2 {
   position: relative;
@@ -872,7 +914,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem; }
 
-h1, h2 {
+h1 {
+  font-family: 'brandon_grotesquethin'; }
+
+h2 {
   font-family: 'brandon_grotesquemedium';
   margin-bottom: 2rem; }
 
@@ -881,7 +926,7 @@ h3, h4, h5, h6 {
   margin-bottom: 1rem; }
 
 h1 {
-  font-size: 4.0rem;
+  font-size: 2.1rem;
   line-height: 1.2;
   letter-spacing: -.1rem; }
 
@@ -914,7 +959,7 @@ h6 {
 /* Larger than phablet */
 @media (min-width: 550px) {
   h1 {
-    font-size: 5.0rem; }
+    font-size: 2.4rem; }
 
   h2 {
     font-size: 2.2rem; }
