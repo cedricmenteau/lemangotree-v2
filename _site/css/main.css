@@ -22,61 +22,6 @@ ul {
   padding: 0;
   margin: 0; }
 
-header {
-  display: flex;
-  position: relative;
-  box-sizing: border-box;
-  padding-top: 145px;
-  width: 100%;
-  height: 620px; }
-  header #item {
-    stroke: #fff; }
-  header:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: url("../images/header.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 0; }
-  header .container-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    background-color: #fff;
-    border-radius: 50%;
-    height: 220px;
-    width: 220px;
-    transition: all 0.3s ease-in-out; }
-    header .container-logo img {
-      height: 200px; }
-  header .container-logo.scrolled {
-    opacity: 0; }
-  header .header-content {
-    position: relative;
-    z-index: 1;
-    padding-top: 30px;
-    text-align: center; }
-    header .header-content h1 {
-      font-size: 1.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05rem;
-      color: #fff; }
-      header .header-content h1 small {
-        text-transform: uppercase;
-        font-size: 1.4rem;
-        letter-spacing: 0.1rem; }
-
 h2 {
   position: relative;
   color: rgba(0, 0, 0, 0.7); }
@@ -1317,16 +1262,200 @@ nav {
       text-align: center;
       transition: all 0.3s ease-in-out; }
     nav ul .nav-logo {
-      display: none; }
+      display: none;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out; }
       nav ul .nav-logo img {
         height: 45px;
         transition: all 0.3s ease-in-out; }
+
+.nav-page ul {
+  justify-content: space-between; }
+  .nav-page ul li {
+    flex-basis: inherit; }
+  .nav-page ul .nav-logo {
+    display: block;
+    visibility: hidden; }
 
 nav.scrolled {
   background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
   nav.scrolled .nav-logo {
-    display: block; }
+    display: block;
+    visibility: visible; }
+
+header {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding-top: 145px;
+  width: 100%;
+  height: 620px; }
+  header #item {
+    stroke: #fff; }
+  header:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0; }
+  header .container-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 220px;
+    width: 220px;
+    transition: all 0.3s ease-in-out; }
+    header .container-logo img {
+      height: 200px; }
+  header .container-logo.scrolled {
+    opacity: 0; }
+  header .header-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 30px;
+    text-align: center; }
+    header .header-content h1 {
+      font-size: 1.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      color: #fff; }
+      header .header-content h1 small {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem; }
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 60px;
+  width: 100%;
+  height: 300px; }
+  .page-header #item {
+    stroke: #fff; }
+  .page-header:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0; }
+  .page-header .container-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 100px;
+    min-height: 100px;
+    width: 100px;
+    transition: all 0.3s ease-in-out; }
+    .page-header .container-logo img {
+      height: 90px; }
+  .page-header .container-logo.scrolled {
+    opacity: 0; }
+  .page-header .header-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 30px;
+    text-align: center; }
+    .page-header .header-content h1 {
+      font-size: 1.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      color: #fff; }
+      .page-header .header-content h1 small {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem; }
+
+.current-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 5% 0; }
+  .current-menu h2 {
+    margin-bottom: 0.5rem; }
+  .current-menu p {
+    text-align: center; }
+  .current-menu span {
+    margin-bottom: 1rem;
+    text-align: center; }
+  .current-menu i {
+    margin-bottom: 1rem;
+    font-weight: 600; }
+  .current-menu ul {
+    list-style: none;
+    text-align: center; }
+    .current-menu ul li strong {
+      font-family: 'brandon_grotesquethin';
+      font-size: 1.6rem;
+      line-height: 1.3;
+      letter-spacing: 0.05rem;
+      color: #38e2aa; }
+      @media (min-width: 550px) {
+        .current-menu ul li strong {
+          font-size: 1.7rem; } }
+  .current-menu section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 2%;
+    width: 33.33333%; }
+  .current-menu section#formules {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 60px;
+    width: 100%; }
+    .current-menu section#formules .formule {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+      width: 30%;
+      background-color: #fff;
+      border: 1px solid #ffdada;
+      border-radius: 2px; }
+  .current-menu section#drinks,
+  .current-menu section#coffee {
+    margin-top: 30px;
+    width: 50%; }
+    .current-menu section#drinks .divided,
+    .current-menu section#coffee .divided {
+      display: flex;
+      width: 100%; }
+      .current-menu section#drinks .divided ul,
+      .current-menu section#coffee .divided ul {
+        width: 50%; }
 
 /*
  * We are hiding the invisible nav outside the screen

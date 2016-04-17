@@ -33,11 +33,28 @@ nav {
 
     .nav-logo {
       display: none;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
 
       img {
         height: 45px;
         transition: all 0.3s ease-in-out;
       }
+    }
+  }
+}
+
+.nav-page {
+  ul {
+    justify-content: space-between;
+
+    li {
+      flex-basis: inherit;
+    }
+
+    .nav-logo {
+      display: block;
+      visibility: hidden;
     }
   }
 }
@@ -48,5 +65,6 @@ nav.scrolled {
 
   .nav-logo {
     display: block;
+    visibility: visible;
   }
 }
