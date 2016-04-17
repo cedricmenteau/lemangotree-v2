@@ -1241,6 +1241,8 @@ nav {
   z-index: 2;
   width: 100%;
   top: 0;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   transition: all 0.3s ease-in-out; }
   nav a, nav a:visited, nav a:focus {
     color: #333;
@@ -1277,12 +1279,9 @@ nav {
     display: block;
     visibility: hidden; }
 
-nav.scrolled {
-  background-color: #fff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
-  nav.scrolled .nav-logo {
-    display: block;
-    visibility: visible; }
+nav.scrolled .nav-logo {
+  display: block;
+  visibility: visible; }
 
 header {
   display: flex;
