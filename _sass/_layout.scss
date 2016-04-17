@@ -425,30 +425,113 @@ section#origins {
 
 section#events {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 80px 0 40px;
 
-  img {
-    width: 33.33333%;
+  .block-1 {
+    display: flex;
+    .image {
+      width: 33.33333%;
+
+      &:after {
+        content:"";
+        display: block;
+        padding-bottom: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .image-1 {
+      &:after {
+        background-image: url('../images/mozaic_items/pain.jpg');
+      }
+    }
+
+    .image-2 {
+      &:after {
+        background-image: url('../images/mozaic_items/pain.jpg');
+      }
+    }
+
+    .what-we-do {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 0 5%;
+      width: 33.33333%;
+      text-align: center;
+    }
   }
 
-  .what-we-do {
+  .block-2 {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 5%;
+    width: 100%;
+
+    .image {
+      width: 50%;
+
+      &:after{
+        content:"";
+        display: block;
+        padding-bottom: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .image-3 {
+      &:after {
+        background-image: url('../images/mozaic_items/pain.jpg');
+      }
+    }
+
+    .image-4 {
+      &:after {
+        background-image: url('../images/mozaic_items/pain.jpg');
+      }
+    }
   }
 }
 
 section#contact {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 0 40px;
+  padding: 80px 30px 40px;
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  .contact-map {
+    border: 5px solid #fff;
+    border-radius: 2px;
+  }
+
+  .contact-details {
+    padding: 0 60px;
+
+    p {
+      text-align: center;
+    }
+
+    ul {
+      display:flex;
+      list-style: none;
+      margin-bottom: 0;
+
+      li:not(last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
 }
 
 section#instagram {
@@ -466,6 +549,10 @@ section#instagram {
 
     @media (min-width: 550px) {
       width: 33.333333%;
+    }
+
+    a, a:active, a:focus, a:hover {
+      color: #222;
     }
   }
 

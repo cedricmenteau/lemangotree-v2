@@ -316,25 +316,71 @@ section#origins {
 
 section#events {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 0 40px; }
-  section#events img {
-    width: 33.33333%; }
-  section#events .what-we-do {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 5%; }
-
-section#contact {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 80px 0 40px; }
+  section#events .block-1 {
+    display: flex; }
+    section#events .block-1 .image {
+      width: 33.33333%; }
+      section#events .block-1 .image:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+        background-size: cover;
+        background-repeat: no-repeat; }
+    section#events .block-1 .image-1:after {
+      background-image: url("../images/mozaic_items/pain.jpg"); }
+    section#events .block-1 .image-2:after {
+      background-image: url("../images/mozaic_items/pain.jpg"); }
+    section#events .block-1 .what-we-do {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 0 5%;
+      width: 33.33333%;
+      text-align: center; }
+  section#events .block-2 {
+    display: flex;
+    width: 100%; }
+    section#events .block-2 .image {
+      width: 50%; }
+      section#events .block-2 .image:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+        background-size: cover;
+        background-repeat: no-repeat; }
+    section#events .block-2 .image-3:after {
+      background-image: url("../images/mozaic_items/pain.jpg"); }
+    section#events .block-2 .image-4:after {
+      background-image: url("../images/mozaic_items/pain.jpg"); }
+
+section#contact {
+  display: flex;
+  padding: 80px 30px 40px; }
+  section#contact .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; }
+  section#contact .contact-map {
+    border: 5px solid #fff;
+    border-radius: 2px; }
+  section#contact .contact-details {
+    padding: 0 60px; }
+    section#contact .contact-details p {
+      text-align: center; }
+    section#contact .contact-details ul {
+      display: flex;
+      list-style: none;
+      margin-bottom: 0; }
+      section#contact .contact-details ul li:not(last-child) {
+        margin-right: 10px; }
 
 section#instagram {
   display: flex;
@@ -351,6 +397,8 @@ section#instagram {
     @media (min-width: 550px) {
       section#instagram p {
         width: 33.333333%; } }
+    section#instagram p a, section#instagram p a:active, section#instagram p a:focus, section#instagram p a:hover {
+      color: #222; }
   section#instagram #instafeed {
     display: flex;
     flex-wrap: wrap; }
