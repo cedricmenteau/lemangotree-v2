@@ -116,8 +116,8 @@ section#sisters {
       section#sisters .sisters-carousel .slick-slider .slick-dots {
         position: absolute;
         width: 8%;
-        top: 50%;
-        transform: translateY(-42%);
+        top: 55%;
+        transform: translateY(-40%);
         left: -15px; }
         section#sisters .sisters-carousel .slick-slider .slick-dots li {
           display: flex;
@@ -154,9 +154,19 @@ section#origins {
     display: flex;
     flex-direction: column;
     width: 42.5%; }
+    @media (max-width: 550px) {
+      section#products .block-1,
+      section#origins .block-1 {
+        flex-direction: row;
+        order: 2;
+        width: 100%; } }
     section#products .block-1 .image,
     section#origins .block-1 .image {
       width: 100%; }
+      @media (max-width: 550px) {
+        section#products .block-1 .image,
+        section#origins .block-1 .image {
+          width: 50%; } }
       section#products .block-1 .image:after,
       section#origins .block-1 .image:after {
         content: "";
@@ -169,9 +179,15 @@ section#origins {
     display: flex;
     flex-direction: column;
     width: 57.5%; }
+    @media (max-width: 550px) {
+      section#products .block-2,
+      section#origins .block-2 {
+        width: 100%;
+        order: 1; } }
     section#products .block-2 .image-3,
     section#origins .block-2 .image-3 {
-      width: 100%; }
+      width: 100%;
+      order: 2; }
       section#products .block-2 .image-3:after,
       section#origins .block-2 .image-3:after {
         content: "";
@@ -182,10 +198,16 @@ section#origins {
     section#products .block-2 .block-3,
     section#origins .block-2 .block-3 {
       display: flex;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      order: 1; }
       section#products .block-2 .block-3 .image-4,
       section#origins .block-2 .block-3 .image-4 {
         width: 50%; }
+        @media (max-width: 550px) {
+          section#products .block-2 .block-3 .image-4,
+          section#origins .block-2 .block-3 .image-4 {
+            order: 2;
+            width: 100%; } }
         section#products .block-2 .block-3 .image-4:after,
         section#origins .block-2 .block-3 .image-4:after {
           content: "";
@@ -202,24 +224,32 @@ section#origins {
         padding: 0 5%;
         width: 40%;
         text-align: center; }
+        @media (max-width: 550px) {
+          section#products .block-2 .block-3 .prestations-content,
+          section#origins .block-2 .block-3 .prestations-content {
+            order: 1;
+            width: 100%; } }
 
 section#products .block-1 .image-1:after {
-  background-image: url("../images/mozaic_1/product_1.jpg"); }
+  background-image: url("../images/creations/nos_creations_1.jpg");
+  background-position: right; }
 section#products .block-1 .image-2:after {
-  background-image: url("../images/mozaic_1/product_2.jpg"); }
+  background-image: url("../images/creations/nos_creations_2.jpg");
+  background-position: center; }
 section#products .block-2 .image-3:after {
-  background-image: url("../images/mozaic_1/product_3.JPG"); }
+  background-image: url("../images/creations/nos_creations_3.JPG"); }
 section#products .block-3 .image-4:after {
-  background-image: url("../images/mozaic_1/product_4.JPG"); }
+  background-image: url("../images/creations/nos_creations_4.JPG"); }
 
 section#origins .block-1 .image-1:after {
-  background-image: url("../images/mozaic_items/salade.jpg"); }
+  background-image: url("../images/produits/nos_produits_1.jpg");
+  background-position: center; }
 section#origins .block-1 .image-2:after {
-  background-image: url("../images/mozaic_items/pain.jpg"); }
+  background-image: url("../images/produits/nos_produits_2.jpg"); }
 section#origins .block-2 .image-3:after {
-  background-image: url("../images/mozaic_items/pain.jpg"); }
+  background-image: url("../images/produits/nos_produits_3.jpg"); }
 section#origins .block-3 .image-4:after {
-  background-image: url("../images/mozaic_items/salade.jpg"); }
+  background-image: url("../images/produits/nos_produits_4.jpg"); }
 
 section#menu {
   display: flex;
@@ -276,9 +306,9 @@ section#events {
         background-size: cover;
         background-repeat: no-repeat; }
     section#events .block-1 .image-1:after {
-      background-image: url("../images/mozaic_items/pain.jpg"); }
+      background-image: url("../images/evenements/nos_evenements_1.jpg"); }
     section#events .block-1 .image-2:after {
-      background-image: url("../images/mozaic_items/pain.jpg"); }
+      background-image: url("../images/evenements/nos_evenements_2.jpg"); }
     section#events .block-1 .what-we-do {
       display: flex;
       flex-direction: column;
@@ -300,13 +330,14 @@ section#events {
         background-size: cover;
         background-repeat: no-repeat; }
     section#events .block-2 .image-3:after {
-      background-image: url("../images/mozaic_items/pain.jpg"); }
+      background-image: url("../images/evenements/nos_evenements_3.jpg");
+      background-position: 71%; }
     section#events .block-2 .image-4:after {
-      background-image: url("../images/mozaic_items/pain.jpg"); }
+      background-image: url("../images/evenements/nos_evenements_4.jpg"); }
 
 section#contact {
   display: flex;
-  padding: 80px 30px 40px; }
+  padding: 80px 90px 40px; }
   section#contact .block {
     display: flex;
     flex-direction: column;
@@ -760,6 +791,9 @@ textarea {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
+  @media (max-width: 550px) {
+    .container {
+      padding: 0; } }
 
 .column,
 .columns {

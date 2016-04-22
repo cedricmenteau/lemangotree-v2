@@ -126,8 +126,8 @@ section#sisters {
       .slick-dots {
         position: absolute;
         width: 8%;
-        top: 50%;
-        transform: translateY(-42%);
+        top: 55%;
+        transform: translateY(-40%);
         left: -15px;
 
         li {
@@ -181,8 +181,18 @@ section#origins {
     flex-direction: column;
     width: 42.5%;
 
+    @media (max-width: 550px) {
+      flex-direction: row;
+      order: 2;
+      width: 100%;
+    }
+
     .image {
       width: 100%;
+
+      @media (max-width: 550px) {
+        width: 50%;
+      }
 
       &:after {
         content: "";
@@ -199,8 +209,14 @@ section#origins {
     flex-direction: column;
     width: 57.5%;
 
+    @media (max-width: 550px) {
+      width: 100%;
+      order: 1;
+    }
+
     .image-3 {
       width: 100%;
+      order: 2;
 
       &:after {
         content: "";
@@ -214,9 +230,15 @@ section#origins {
     .block-3 {
       display: flex;
       flex-wrap: wrap;
+      order: 1;
 
       .image-4 {
         width: 50%;
+
+        @media (max-width: 550px) {
+          order: 2;
+          width: 100%;
+        }
 
         &:after {
           content: "";
@@ -235,6 +257,11 @@ section#origins {
         padding: 0 5%;
         width: 40%;
         text-align: center;
+
+        @media (max-width: 550px) {
+          order: 1;
+          width: 100%;
+        }
       }
     }
   }
@@ -244,13 +271,15 @@ section#products {
   .block-1 {
     .image-1 {
       &:after {
-        background-image: url('../images/mozaic_1/product_1.jpg');
+        background-image: url('../images/creations/nos_creations_1.jpg');
+        background-position: right;
       }
     }
 
     .image-2 {
       &:after {
-        background-image: url('../images/mozaic_1/product_2.jpg');
+        background-image: url('../images/creations/nos_creations_2.jpg');
+        background-position: center;
       }
     }
   }
@@ -258,7 +287,7 @@ section#products {
   .block-2 {
     .image-3 {
       &:after {
-        background-image: url('../images/mozaic_1/product_3.JPG');
+        background-image: url('../images/creations/nos_creations_3.JPG');
       }
     }
   }
@@ -266,7 +295,7 @@ section#products {
   .block-3 {
     .image-4 {
       &:after {
-        background-image: url('../images/mozaic_1/product_4.JPG');
+        background-image: url('../images/creations/nos_creations_4.JPG');
       }
     }
   }
@@ -276,13 +305,14 @@ section#origins {
   .block-1 {
     .image-1 {
       &:after {
-        background-image: url('../images/mozaic_items/salade.jpg');
+        background-image: url('../images/produits/nos_produits_1.jpg');
+        background-position: center;
       }
     }
 
     .image-2 {
       &:after {
-        background-image: url('../images/mozaic_items/pain.jpg');
+        background-image: url('../images/produits/nos_produits_2.jpg');
       }
     }
   }
@@ -290,7 +320,7 @@ section#origins {
   .block-2 {
     .image-3 {
       &:after {
-        background-image: url('../images/mozaic_items/pain.jpg');
+        background-image: url('../images/produits/nos_produits_3.jpg');
       }
     }
   }
@@ -298,7 +328,7 @@ section#origins {
   .block-3 {
     .image-4 {
       &:after {
-        background-image: url('../images/mozaic_items/salade.jpg');
+        background-image: url('../images/produits/nos_produits_4.jpg');
       }
     }
   }
@@ -373,13 +403,13 @@ section#events {
 
     .image-1 {
       &:after {
-        background-image: url('../images/mozaic_items/pain.jpg');
+        background-image: url('../images/evenements/nos_evenements_1.jpg');
       }
     }
 
     .image-2 {
       &:after {
-        background-image: url('../images/mozaic_items/pain.jpg');
+        background-image: url('../images/evenements/nos_evenements_2.jpg');
       }
     }
 
@@ -413,13 +443,14 @@ section#events {
 
     .image-3 {
       &:after {
-        background-image: url('../images/mozaic_items/pain.jpg');
+        background-image: url('../images/evenements/nos_evenements_3.jpg');
+        background-position: 71%;
       }
     }
 
     .image-4 {
       &:after {
-        background-image: url('../images/mozaic_items/pain.jpg');
+        background-image: url('../images/evenements/nos_evenements_4.jpg');
       }
     }
   }
@@ -427,7 +458,7 @@ section#events {
 
 section#contact {
   display: flex;
-  padding: 80px 30px 40px;
+  padding: 80px 90px 40px;
 
   .block {
     display: flex;
