@@ -304,7 +304,7 @@ section#products {
   .block-2 {
     .image-3 {
       &:after {
-        background-image: url('../images/creations/nos_creations_3.JPG');
+        background-image: url('../images/creations/nos_creations_3.jpg');
       }
     }
   }
@@ -312,7 +312,7 @@ section#products {
   .block-3 {
     .image-4 {
       &:after {
-        background-image: url('../images/creations/nos_creations_4.JPG');
+        background-image: url('../images/creations/nos_creations_4.jpg');
       }
     }
   }
@@ -407,7 +407,7 @@ section#origins {
   display: flex;
   flex-wrap: wrap;
   padding: 80px 0 40px;
-  @media (max-width: 550px) { padding: 30px 0 40px; }
+  @media (max-width: 550px) { padding: 60px 0 40px; }
 }
 
 section#events {
@@ -416,7 +416,7 @@ section#events {
   justify-content: center;
   align-items: center;
   padding: 80px 0 40px;
-  @media (max-width: 550px) { padding: 30px 0 40px; }
+  @media (max-width: 550px) { padding: 60px 0 40px; }
 
   .block-1 {
     display: flex;
@@ -502,7 +502,7 @@ section#contact {
 
   @media (max-width: 550px) {
     flex-direction: column;
-    padding: 30px 0 40px;
+    padding: 60px 0 40px;
   }
 
   .block {
