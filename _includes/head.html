@@ -17,12 +17,7 @@
   <link rel="apple-touch-icon" sizes="152x152" href="{{ site.github.url }}/images/icons/icon-lemangotree-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ site.github.url }}/images/icons/icon-lemangotree-180x180.png">
 
-  <link rel="icon" type="image/png" href="<%= image_path 'favicons/favicon-16x16.png' %>" sizes="16x16">
-  <link rel="icon" type="image/png" href="<%= image_path 'favicons/favicon-32x32.png' %>" sizes="32x32">
-  <link rel="icon" type="image/png" href="<%= image_path 'favicons/favicon-96x96.png' %>" sizes="96x96">
-  <link rel="icon" type="image/png" href="<%= image_path 'favicons/favicon-194x194.png' %>" sizes="194x194">
-  <link rel="icon" type="image/png" href="<%= image_path 'favicons/android-chrome-192x192' %>" sizes="192x192">
-  <link rel="shortcut icon" href="{{ site.github.url }}/favicons/favicon.ico">
+  <link rel="shortcut icon" type="image/png" href="href="{{ "favicon/favicon-32x32.png" | prepend: site.baseurl }}"" sizes="32x32">
 
   <meta name="apple-mobile-web-app-title" content="Le Mango Tree">
   <meta name="application-name" content="Le Mango Tree">
@@ -37,7 +32,7 @@
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
   <meta property="og:type" content="website">
   <meta property="og:description" content="{{ site.description }}">
-  <meta property="og:url" content="http://www.lemangotree.com"/>
+  <meta property="og:url" content="{{ site.github.url }}">
   <meta property="og:image" content="{{ site.github.url }}/{{ page.thumbnail }}"/>
   <meta property="og:site_name" content="{{ site.title }}">
 
