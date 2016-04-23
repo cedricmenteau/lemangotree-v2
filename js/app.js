@@ -18,6 +18,19 @@ $(document).ready(function(){
   });
 });
 
+// TOGGLE NAVBAR STATE ON SCROLL
+$(document).ready(function(){
+  $('.menu-icon').click(function(e) {
+    $(this).toggleClass('menu-opened');
+    $('#menu-mobile').toggleClass('menu-hidden');
+    e.preventDefault() /*ignores actual link*/
+  });
+
+  $('.nav-mobile ul li a').click(function(e) {
+    $('#menu-mobile').toggleClass('menu-hidden');
+  });
+});
+
 // SLICK
 $('.carousel').slick({
   dots: true,

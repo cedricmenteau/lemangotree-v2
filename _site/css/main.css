@@ -397,6 +397,7 @@ section#contact {
         width: 100%; } }
   section#contact .contact-map {
     box-sizing: border-box;
+    width: 70%;
     border: 5px solid #fff;
     border-radius: 2px; }
     @media (max-width: 550px) {
@@ -404,11 +405,13 @@ section#contact {
         order: 2;
         display: none; } }
   section#contact .contact-details {
-    padding: 0 60px; }
+    padding: 0 60px;
+    width: 30%; }
     @media (max-width: 550px) {
       section#contact .contact-details {
         order: 1;
-        padding: 0 0 30px; } }
+        padding: 0 0 30px;
+        width: 100%; } }
     section#contact .contact-details p {
       text-align: center; }
     section#contact .contact-details ul {
@@ -420,6 +423,7 @@ section#contact {
     section#contact .contact-details .locator {
       display: inline-block;
       height: 38px;
+      margin-top: 30px;
       padding: 0 30px;
       color: #555;
       text-align: center;
@@ -439,6 +443,9 @@ section#contact {
         color: #333;
         border-color: #888;
         outline: 0; }
+      @media (min-width: 550px) {
+        section#contact .contact-details .locator {
+          display: none; } }
 
 section#instagram {
   display: flex;
@@ -1369,26 +1376,81 @@ nav {
     font-weight: 600; }
   nav a:hover {
     color: #333; }
-  nav ul {
+  nav ul.nav-desktop {
+    display: none; }
+  nav .nav-mobile {
     display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    max-width: 960px;
-    list-style: none;
-    height: 60px;
-    align-items: center; }
-    nav ul li {
-      flex-basis: 15%;
-      margin-bottom: 0;
-      text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; }
+    nav .nav-mobile .menu-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
       transition: all 0.3s ease-in-out; }
-    nav ul .nav-logo {
-      display: none;
-      visibility: hidden;
+      nav .nav-mobile .menu-icon svg {
+        height: 25px; }
+    nav .nav-mobile .menu-opened {
+      transform: rotate(90deg); }
+    nav .nav-mobile img {
+      margin: 10px 0 10px 20px;
+      height: 30px; }
+    nav .nav-mobile ul {
+      list-style: none;
+      position: absolute;
+      padding: 20px;
+      top: 75px;
+      right: 10px;
+      background-color: #fff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
       transition: all 0.3s ease-in-out; }
-      nav ul .nav-logo img {
-        height: 45px;
+      nav .nav-mobile ul li {
+        margin-bottom: 2rem; }
+        nav .nav-mobile ul li a {
+          padding: 10px 20px; }
+      nav .nav-mobile ul:before {
+        bottom: 100%;
+        right: 9%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        top: -20px;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(194, 225, 245, 0);
+        border-bottom-color: #fff;
+        border-width: 12px;
+        margin-left: -10px; }
+    nav .nav-mobile ul.menu-hidden {
+      display: none; }
+  @media (min-width: 1000px) {
+    nav .nav-mobile {
+      display: none; }
+    nav ul.nav-desktop {
+      display: flex;
+      justify-content: space-around;
+      margin: 0 auto;
+      max-width: 960px;
+      list-style: none;
+      height: 60px;
+      align-items: center; }
+      nav ul.nav-desktop li {
+        flex-basis: 15%;
+        margin-bottom: 0;
+        text-align: center;
         transition: all 0.3s ease-in-out; }
+      nav ul.nav-desktop .nav-logo {
+        display: none;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out; }
+        nav ul.nav-desktop .nav-logo img {
+          height: 45px;
+          transition: all 0.3s ease-in-out; } }
 
 .nav-page ul {
   justify-content: space-between; }
@@ -1398,7 +1460,7 @@ nav {
     display: block;
     visibility: hidden; }
 
-nav.scrolled .nav-logo {
+nav.scrolled ul.nav-desktop .nav-logo {
   display: block;
   visibility: visible; }
 

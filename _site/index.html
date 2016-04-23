@@ -20,7 +20,7 @@
 
   <body>
     <nav role="navigation" class="nav">
-  <ul>
+  <ul class="nav-desktop">
     <li><a data-scroll href="#intro">Qui sommes-nous ?</a></li>
     <li><a data-scroll href="#products">Nos créations</a></li>
     <li><a href="/menu">Le menu</a></li>
@@ -29,6 +29,36 @@
     <li><a data-scroll href="#events">Événementiel</a></li>
     <li><a data-scroll href="#contact">Contact</a></li>
   </ul>
+
+  <div class="nav-mobile">
+    <a class="nav-logo" href="/"><img src="/images/logo-mangotree-tree.png" alt=""></a>
+    <div class="menu-icon"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="46px" viewBox="0 0 12 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon_menu" sketch:type="MSLayerGroup" fill="#FFDADA">
+            <g id="Page-1" sketch:type="MSShapeGroup">
+                <g id="icon_menu">
+                    <circle id="Oval-1" cx="6" cy="6" r="6"></circle>
+                    <circle id="Oval-1-Copy" cx="6" cy="23" r="6"></circle>
+                    <circle id="Oval-1-Copy-2" cx="6" cy="40" r="6"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></div>
+    <ul id="menu-mobile" class="menu-hidden">
+      <li><a data-scroll href="#intro">Qui sommes-nous ?</a></li>
+      <li><a data-scroll href="#products">Nos créations</a></li>
+      <li><a href="/menu">Le menu</a></li>
+      <li><a data-scroll href="#origins">Healthy spot</a></li>
+      <li><a data-scroll href="#events">Événementiel</a></li>
+      <li><a data-scroll href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
     <header id="header">
@@ -446,8 +476,8 @@
   <div class="block contact-map">
     <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
     <div style='overflow:hidden;height:440px;width:100%;'>
-      <div id='gmap_canvas' style='height:440px;width:700px;'></div>
-      <script type='text/javascript'>function init_map(){var myOptions = {zoom:17, scrollwheel:false,navigationControl:false, mapTypeControl:false, scaleControl:false, draggable:true, styles:[{"featureType":"road","elementType":"geometry","stylers":[{ "lightness": 100 },{"visibility":"simplified"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#FFFAF0"}]},{"featureType":"water","stylers":[{"color":"#d9edf7"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"lightness":40}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"visibility":"on","color":"#c5dac6"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#CCAA88"},{"lightness":40}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#EEEEEE"}]},{"featureType":"road","stylers":[{"visibility":"simplified"},{"color":"#FF0000"},{"gamma":9}]},{"featureType":"road.highway","stylers":[{"visibility":"on"},{"color":"#FF0000"},{"gamma":8}]},{"featureType":"road.highway.controlled_access","stylers":[{"visibility":"on"},{"color":"#FF0000"},{"gamma":4}]},{"featureType": "road","elementType": "labels","stylers": [{ "visibility": "on" }]},{"featureType":"poi.business ","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"poi.government","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#DDDDDD"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#CCCCCC"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#AAAAAA"},{"gamma":4}]}],center:new google.maps.LatLng(43.66199766617055,-1.428579105626675),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(43.661889, -1.428769)});}google.maps.event.addDomListener(window, 'load', init_map);</script>
+      <div id='gmap_canvas' style='height:440px;width:100%;'></div>
+      <script type='text/javascript'>function init_map(){var myOptions = {zoom:17, scrollwheel:false,navigationControl:true, mapTypeControl:false, zoomControl: true, scaleControl:false, draggable:true, styles:[{"featureType":"road","elementType":"geometry","stylers":[{ "lightness": 100 },{"visibility":"simplified"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#FFFAF0"}]},{"featureType":"water","stylers":[{"color":"#d9edf7"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"lightness":40}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"visibility":"on","color":"#c5dac6"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#CCAA88"},{"lightness":40}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#EEEEEE"}]},{"featureType":"road","stylers":[{"visibility":"simplified"},{"color":"#FF0000"},{"gamma":9}]},{"featureType":"road.highway","stylers":[{"visibility":"on"},{"color":"#FF0000"},{"gamma":8}]},{"featureType":"road.highway.controlled_access","stylers":[{"visibility":"on"},{"color":"#FF0000"},{"gamma":4}]},{"featureType": "road","elementType": "labels","stylers": [{ "visibility": "on" }]},{"featureType":"poi.business ","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"poi.government","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#DDDDDD"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#CCCCCC"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#AAAAAA"},{"gamma":4}]}],center:new google.maps.LatLng(43.66199766617055,-1.428579105626675),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(43.661889, -1.428769)});}google.maps.event.addDomListener(window, 'load', init_map);</script>
     </div>
   </div>
   <div class="block contact-details">
