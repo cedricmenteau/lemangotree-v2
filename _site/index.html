@@ -495,7 +495,7 @@
 </svg></a></li>
     </ul>
 
-    <a onclick="navigate(43.66199766617055,-1.428579105626675)" >Retrouvez-nous !</a>
+    <a class="locator" onclick="navigate(43.66199766617055,-1.428579105626675)" >Retrouvez-nous !</a>
   </div>
 </section>
 
@@ -536,10 +536,10 @@ function navigate(lat, lng) {
         protocol = 'http://';
 
       }
-      window.location = protocol + 'maps.apple.com/maps?daddr=' + lat + ',' + lng + '&amp;ll=';
+      window.location = protocol + 'maps.apple.com/maps?saddr=My%20Location&daddr=' + lat + ',' + lng + '&amp;ll=';
     }
     else {
-      window.open('http://maps.google.com?daddr=' + lat + ',' + lng + '&z=12&amp;ll=');
+      window.open('http://maps.google.com?saddr=My%20Location&daddr=' + lat + ',' + lng + '&z=12&amp;ll=');
     }
   }
 </script>
