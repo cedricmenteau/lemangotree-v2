@@ -6,8 +6,56 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,500,300,700' rel='stylesheet' type='text/css'>
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.github.url }}/images/icons/icon-lemangotree-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ site.github.url }}/images/icons/icon-lemangotree-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.github.url }}/images/icons/icon-lemangotree-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.github.url }}/images/icons/icon-lemangotree-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.github.url }}/images/icons/icon-lemangotree-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.github.url }}/images/icons/icon-lemangotree-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ site.github.url }}/images/icons/icon-lemangotree-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.github.url }}/images/icons/icon-lemangotree-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.github.url }}/images/icons/icon-lemangotree-180x180.png">
 
+  <link rel="icon" type="image/png" href="<%= image_path 'favicons/favicon-16x16.png' %>" sizes="16x16">
+  <link rel="icon" type="image/png" href="<%= image_path 'favicons/favicon-32x32.png' %>" sizes="32x32">
+  <link rel="icon" type="image/png" href="<%= image_path 'favicons/favicon-96x96.png' %>" sizes="96x96">
+  <link rel="icon" type="image/png" href="<%= image_path 'favicons/favicon-194x194.png' %>" sizes="194x194">
+  <link rel="icon" type="image/png" href="<%= image_path 'favicons/android-chrome-192x192' %>" sizes="192x192">
+  <link rel="shortcut icon" href="{{ site.github.url }}/favicons/favicon.ico">
+
+  <meta name="apple-mobile-web-app-title" content="Le Mango Tree">
+  <meta name="application-name" content="Le Mango Tree">
+  <meta name="msapplication-TileColor" content="#fff">
+  <meta name="msapplication-TileImage" content="{{ site.github.url }}/images/icons/icon-lemangotree-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="" />
+
+  <!-- Open Graph FB -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="http://www.lemangotree.com"/>
+  <meta property="og:image" content="{{ site.github.url }}/{{ page.thumbnail }}"/>
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  <!-- Twitter card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lemangotree">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:creator" content="@lemangotree">
+  <meta name="twitter:image:src" content="{{ site.github.url }}/{{ page.thumbnail }}">
+
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+  <meta itemprop="description" content="{{ site.description }}">
+  <meta itemprop="image" content="{{ site.github.url }}/{{ page.thumbnail }}">
+
+  <!-- Links Vendors & CSS -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,500,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{ site.github.url }}/css/main.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
