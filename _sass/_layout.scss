@@ -39,8 +39,7 @@ section#intro {
   justify-content: center;
   align-items: center;
   padding: 80px 0 40px;
-
-  @media (min-width: 550px) { padding: 80px 0; }
+  @media (min-width: 550px) { padding: 30px 0; }
 
   p {
     width: 90%;
@@ -48,6 +47,13 @@ section#intro {
 
     @media (min-width: 550px) {
       width: 33.333333%;
+    }
+  }
+
+  .image-intro {
+    width: 100%;
+    @media (min-width: 550px) {
+      display: none;
     }
   }
 }
@@ -58,6 +64,13 @@ section#sisters {
   padding: 0;
 
   @media (min-width: 1024px) { flex-direction: row; }
+
+  .image-intro {
+    width: 100%;
+    @media (min-width: 550px) {
+      display: none;
+    }
+  }
 
   .sisters-presentation {
     display: flex;
@@ -103,6 +116,10 @@ section#sisters {
 
     @media (min-width: 1024px) {
       width: 50%;
+    }
+
+    @media (max-width: 550px) {
+      display: none;
     }
 
     .slick-slider {
@@ -340,6 +357,18 @@ section#menu {
   justify-content: center;
   align-items: center;
   padding: 80px 0 40px;
+  @media (max-width: 550px) { padding: 30px 0 40px; }
+
+  h2 {
+    @media (max-width: 550px) {
+      width: 150px;
+      text-align: center;
+
+      &:after, &:before {
+        bottom: 23px;
+      }
+    }
+  }
 
   .icon-svg {
     padding-bottom: 30px;
@@ -378,6 +407,7 @@ section#origins {
   display: flex;
   flex-wrap: wrap;
   padding: 80px 0 40px;
+  @media (max-width: 550px) { padding: 30px 0 40px; }
 }
 
 section#events {
@@ -386,11 +416,15 @@ section#events {
   justify-content: center;
   align-items: center;
   padding: 80px 0 40px;
+  @media (max-width: 550px) { padding: 30px 0 40px; }
 
   .block-1 {
     display: flex;
+     @media (max-width: 550px) { flex-direction: column; }
+
     .image {
       width: 33.33333%;
+      @media (max-width: 550px) { width: 100%; }
 
       &:after {
         content:"";
@@ -402,12 +436,14 @@ section#events {
     }
 
     .image-1 {
+      @media (max-width: 550px) { order: 2; }
       &:after {
         background-image: url('../images/evenements/nos_evenements_1.jpg');
       }
     }
 
     .image-2 {
+      @media (max-width: 550px) { order: 3; }
       &:after {
         background-image: url('../images/evenements/nos_evenements_2.jpg');
       }
@@ -422,6 +458,10 @@ section#events {
       padding: 0 5%;
       width: 33.33333%;
       text-align: center;
+      @media (max-width: 550px) {
+        order: 1;
+        width: 100%;
+      }
     }
   }
 
@@ -460,21 +500,36 @@ section#contact {
   display: flex;
   padding: 80px 90px 40px;
 
+  @media (max-width: 550px) {
+    flex-direction: column;
+    padding: 30px 0 40px;
+  }
+
   .block {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
+    @media (max-width: 550px) { width: 100%; }
   }
 
   .contact-map {
+    box-sizing: border-box;
     border: 5px solid #fff;
     border-radius: 2px;
+
+    @media (max-width: 550px) {
+      order: 2;
+    }
   }
 
   .contact-details {
     padding: 0 60px;
+    @media (max-width: 550px) {
+      order: 1;
+      padding: 0 0 30px;
+    }
 
     p {
       text-align: center;
@@ -499,7 +554,7 @@ section#instagram {
   align-items: center;
   padding: 80px 0 0;
 
-  @media (min-width: 550px) { padding: 80px 0 0; }
+  @media (max-width: 550px) { padding: 0; }
 
   p {
     width: 90%;
@@ -521,6 +576,7 @@ section#instagram {
     a {
       display: flex;
       width: 20%;
+      @media (max-width: 550px) { width: 50%; }
 
       img {
         height: 100%;
