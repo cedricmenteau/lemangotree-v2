@@ -1620,12 +1620,19 @@ header {
     box-sizing: border-box;
     padding: 0 2%;
     width: 33.33333%; }
+    @media (max-width: 550px) {
+      .current-menu section {
+        width: 100%; } }
   .current-menu section#formules {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding-bottom: 60px;
     width: 100%; }
+    @media (max-width: 550px) {
+      .current-menu section#formules {
+        flex-direction: column;
+        padding-bottom: 0; } }
     .current-menu section#formules .formule {
       display: flex;
       flex-direction: column;
@@ -1635,10 +1642,19 @@ header {
       background-color: #fff;
       border: 1px solid #ffdada;
       border-radius: 2px; }
+      @media (max-width: 550px) {
+        .current-menu section#formules .formule {
+          margin-bottom: 30px;
+          width: 100%; } }
   .current-menu section#drinks,
   .current-menu section#coffee {
     margin-top: 30px;
     width: 50%; }
+    @media (max-width: 550px) {
+      .current-menu section#drinks,
+      .current-menu section#coffee {
+        margin-top: 0;
+        width: 100%; } }
     .current-menu section#drinks .divided,
     .current-menu section#coffee .divided {
       display: flex;
