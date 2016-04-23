@@ -24,7 +24,7 @@ $('.carousel').slick({
   arrows: false,
   autoPlay: false,
   speed: 700,
-  initialSlide: 2,
+  initialSlide: 0,
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,

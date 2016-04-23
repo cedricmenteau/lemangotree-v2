@@ -39,8 +39,7 @@ section#intro {
   justify-content: center;
   align-items: center;
   padding: 80px 0 40px;
-
-  @media (min-width: 550px) { padding: 80px 0; }
+  @media (min-width: 550px) { padding: 30px 0; }
 
   p {
     width: 90%;
@@ -48,6 +47,13 @@ section#intro {
 
     @media (min-width: 550px) {
       width: 33.333333%;
+    }
+  }
+
+  .image-intro {
+    width: 100%;
+    @media (min-width: 550px) {
+      display: none;
     }
   }
 }
@@ -58,6 +64,13 @@ section#sisters {
   padding: 0;
 
   @media (min-width: 1024px) { flex-direction: row; }
+
+  .image-intro {
+    width: 100%;
+    @media (min-width: 550px) {
+      display: none;
+    }
+  }
 
   .sisters-presentation {
     display: flex;
@@ -105,6 +118,10 @@ section#sisters {
       width: 50%;
     }
 
+    @media (max-width: 550px) {
+      display: none;
+    }
+
     .slick-slider {
       padding-top: 40px;
       width: 100%;
@@ -126,8 +143,8 @@ section#sisters {
       .slick-dots {
         position: absolute;
         width: 8%;
-        top: 50%;
-        transform: translateY(-42%);
+        top: 55%;
+        transform: translateY(-40%);
         left: -15px;
 
         li {
@@ -181,8 +198,18 @@ section#origins {
     flex-direction: column;
     width: 42.5%;
 
+    @media (max-width: 550px) {
+      flex-direction: row;
+      order: 2;
+      width: 100%;
+    }
+
     .image {
       width: 100%;
+
+      @media (max-width: 550px) {
+        width: 50%;
+      }
 
       &:after {
         content: "";
@@ -199,8 +226,14 @@ section#origins {
     flex-direction: column;
     width: 57.5%;
 
+    @media (max-width: 550px) {
+      width: 100%;
+      order: 1;
+    }
+
     .image-3 {
       width: 100%;
+      order: 2;
 
       &:after {
         content: "";
@@ -214,9 +247,15 @@ section#origins {
     .block-3 {
       display: flex;
       flex-wrap: wrap;
+      order: 1;
 
       .image-4 {
         width: 50%;
+
+        @media (max-width: 550px) {
+          order: 2;
+          width: 100%;
+        }
 
         &:after {
           content: "";
@@ -235,6 +274,11 @@ section#origins {
         padding: 0 5%;
         width: 40%;
         text-align: center;
+
+        @media (max-width: 550px) {
+          order: 1;
+          width: 100%;
+        }
       }
     }
   }
@@ -244,13 +288,15 @@ section#products {
   .block-1 {
     .image-1 {
       &:after {
-        background-image: url('../images/mozaic_1/product_1.jpg');
+        background-image: url('../images/creations/nos_creations_1.jpg');
+        background-position: right;
       }
     }
 
     .image-2 {
       &:after {
-        background-image: url('../images/mozaic_1/product_2.jpg');
+        background-image: url('../images/creations/nos_creations_2.jpg');
+        background-position: center;
       }
     }
   }
@@ -258,7 +304,7 @@ section#products {
   .block-2 {
     .image-3 {
       &:after {
-        background-image: url('../images/mozaic_1/product_3.JPG');
+        background-image: url('../images/creations/nos_creations_3.JPG');
       }
     }
   }
@@ -266,7 +312,7 @@ section#products {
   .block-3 {
     .image-4 {
       &:after {
-        background-image: url('../images/mozaic_1/product_4.JPG');
+        background-image: url('../images/creations/nos_creations_4.JPG');
       }
     }
   }
@@ -276,13 +322,14 @@ section#origins {
   .block-1 {
     .image-1 {
       &:after {
-        background-image: url('../images/mozaic_items/salade.jpg');
+        background-image: url('../images/produits/nos_produits_1.jpg');
+        background-position: center;
       }
     }
 
     .image-2 {
       &:after {
-        background-image: url('../images/mozaic_items/pain.jpg');
+        background-image: url('../images/produits/nos_produits_2.jpg');
       }
     }
   }
@@ -290,7 +337,7 @@ section#origins {
   .block-2 {
     .image-3 {
       &:after {
-        background-image: url('../images/mozaic_items/pain.jpg');
+        background-image: url('../images/produits/nos_produits_3.jpg');
       }
     }
   }
@@ -298,7 +345,7 @@ section#origins {
   .block-3 {
     .image-4 {
       &:after {
-        background-image: url('../images/mozaic_items/salade.jpg');
+        background-image: url('../images/produits/nos_produits_4.jpg');
       }
     }
   }
@@ -310,6 +357,18 @@ section#menu {
   justify-content: center;
   align-items: center;
   padding: 80px 0 40px;
+  @media (max-width: 550px) { padding: 30px 0 40px; }
+
+  h2 {
+    @media (max-width: 550px) {
+      width: 150px;
+      text-align: center;
+
+      &:after, &:before {
+        bottom: 23px;
+      }
+    }
+  }
 
   .icon-svg {
     padding-bottom: 30px;
@@ -348,6 +407,7 @@ section#origins {
   display: flex;
   flex-wrap: wrap;
   padding: 80px 0 40px;
+  @media (max-width: 550px) { padding: 30px 0 40px; }
 }
 
 section#events {
@@ -356,11 +416,15 @@ section#events {
   justify-content: center;
   align-items: center;
   padding: 80px 0 40px;
+  @media (max-width: 550px) { padding: 30px 0 40px; }
 
   .block-1 {
     display: flex;
+     @media (max-width: 550px) { flex-direction: column; }
+
     .image {
       width: 33.33333%;
+      @media (max-width: 550px) { width: 100%; }
 
       &:after {
         content:"";
@@ -372,14 +436,16 @@ section#events {
     }
 
     .image-1 {
+      @media (max-width: 550px) { order: 2; }
       &:after {
-        background-image: url('../images/mozaic_items/pain.jpg');
+        background-image: url('../images/evenements/nos_evenements_1.jpg');
       }
     }
 
     .image-2 {
+      @media (max-width: 550px) { order: 3; }
       &:after {
-        background-image: url('../images/mozaic_items/pain.jpg');
+        background-image: url('../images/evenements/nos_evenements_2.jpg');
       }
     }
 
@@ -392,6 +458,10 @@ section#events {
       padding: 0 5%;
       width: 33.33333%;
       text-align: center;
+      @media (max-width: 550px) {
+        order: 1;
+        width: 100%;
+      }
     }
   }
 
@@ -413,13 +483,14 @@ section#events {
 
     .image-3 {
       &:after {
-        background-image: url('../images/mozaic_items/pain.jpg');
+        background-image: url('../images/evenements/nos_evenements_3.jpg');
+        background-position: 71%;
       }
     }
 
     .image-4 {
       &:after {
-        background-image: url('../images/mozaic_items/pain.jpg');
+        background-image: url('../images/evenements/nos_evenements_4.jpg');
       }
     }
   }
@@ -427,7 +498,12 @@ section#events {
 
 section#contact {
   display: flex;
-  padding: 80px 30px 40px;
+  padding: 80px 90px 40px;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    padding: 30px 0 40px;
+  }
 
   .block {
     display: flex;
@@ -435,15 +511,25 @@ section#contact {
     justify-content: center;
     align-items: center;
     width: 50%;
+    @media (max-width: 550px) { width: 100%; }
   }
 
   .contact-map {
+    box-sizing: border-box;
     border: 5px solid #fff;
     border-radius: 2px;
+
+    @media (max-width: 550px) {
+      order: 2;
+    }
   }
 
   .contact-details {
     padding: 0 60px;
+    @media (max-width: 550px) {
+      order: 1;
+      padding: 0 0 30px;
+    }
 
     p {
       text-align: center;
@@ -468,7 +554,7 @@ section#instagram {
   align-items: center;
   padding: 80px 0 0;
 
-  @media (min-width: 550px) { padding: 80px 0 0; }
+  @media (max-width: 550px) { padding: 0; }
 
   p {
     width: 90%;
@@ -490,6 +576,7 @@ section#instagram {
     a {
       display: flex;
       width: 20%;
+      @media (max-width: 550px) { width: 50%; }
 
       img {
         height: 100%;

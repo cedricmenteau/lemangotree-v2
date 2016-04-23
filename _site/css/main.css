@@ -55,13 +55,18 @@ section#intro {
   padding: 80px 0 40px; }
   @media (min-width: 550px) {
     section#intro {
-      padding: 80px 0; } }
+      padding: 30px 0; } }
   section#intro p {
     width: 90%;
     text-align: center; }
     @media (min-width: 550px) {
       section#intro p {
         width: 33.333333%; } }
+  section#intro .image-intro {
+    width: 100%; }
+    @media (min-width: 550px) {
+      section#intro .image-intro {
+        display: none; } }
 
 section#sisters {
   display: flex;
@@ -70,6 +75,11 @@ section#sisters {
   @media (min-width: 1024px) {
     section#sisters {
       flex-direction: row; } }
+  section#sisters .image-intro {
+    width: 100%; }
+    @media (min-width: 550px) {
+      section#sisters .image-intro {
+        display: none; } }
   section#sisters .sisters-presentation {
     display: flex;
     flex-direction: column;
@@ -104,6 +114,9 @@ section#sisters {
     @media (min-width: 1024px) {
       section#sisters .sisters-carousel {
         width: 50%; } }
+    @media (max-width: 550px) {
+      section#sisters .sisters-carousel {
+        display: none; } }
     section#sisters .sisters-carousel .slick-slider {
       padding-top: 40px;
       width: 100%; }
@@ -116,8 +129,8 @@ section#sisters {
       section#sisters .sisters-carousel .slick-slider .slick-dots {
         position: absolute;
         width: 8%;
-        top: 50%;
-        transform: translateY(-42%);
+        top: 55%;
+        transform: translateY(-40%);
         left: -15px; }
         section#sisters .sisters-carousel .slick-slider .slick-dots li {
           display: flex;
@@ -154,9 +167,19 @@ section#origins {
     display: flex;
     flex-direction: column;
     width: 42.5%; }
+    @media (max-width: 550px) {
+      section#products .block-1,
+      section#origins .block-1 {
+        flex-direction: row;
+        order: 2;
+        width: 100%; } }
     section#products .block-1 .image,
     section#origins .block-1 .image {
       width: 100%; }
+      @media (max-width: 550px) {
+        section#products .block-1 .image,
+        section#origins .block-1 .image {
+          width: 50%; } }
       section#products .block-1 .image:after,
       section#origins .block-1 .image:after {
         content: "";
@@ -169,9 +192,15 @@ section#origins {
     display: flex;
     flex-direction: column;
     width: 57.5%; }
+    @media (max-width: 550px) {
+      section#products .block-2,
+      section#origins .block-2 {
+        width: 100%;
+        order: 1; } }
     section#products .block-2 .image-3,
     section#origins .block-2 .image-3 {
-      width: 100%; }
+      width: 100%;
+      order: 2; }
       section#products .block-2 .image-3:after,
       section#origins .block-2 .image-3:after {
         content: "";
@@ -182,10 +211,16 @@ section#origins {
     section#products .block-2 .block-3,
     section#origins .block-2 .block-3 {
       display: flex;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      order: 1; }
       section#products .block-2 .block-3 .image-4,
       section#origins .block-2 .block-3 .image-4 {
         width: 50%; }
+        @media (max-width: 550px) {
+          section#products .block-2 .block-3 .image-4,
+          section#origins .block-2 .block-3 .image-4 {
+            order: 2;
+            width: 100%; } }
         section#products .block-2 .block-3 .image-4:after,
         section#origins .block-2 .block-3 .image-4:after {
           content: "";
@@ -202,24 +237,32 @@ section#origins {
         padding: 0 5%;
         width: 40%;
         text-align: center; }
+        @media (max-width: 550px) {
+          section#products .block-2 .block-3 .prestations-content,
+          section#origins .block-2 .block-3 .prestations-content {
+            order: 1;
+            width: 100%; } }
 
 section#products .block-1 .image-1:after {
-  background-image: url("../images/mozaic_1/product_1.jpg"); }
+  background-image: url("../images/creations/nos_creations_1.jpg");
+  background-position: right; }
 section#products .block-1 .image-2:after {
-  background-image: url("../images/mozaic_1/product_2.jpg"); }
+  background-image: url("../images/creations/nos_creations_2.jpg");
+  background-position: center; }
 section#products .block-2 .image-3:after {
-  background-image: url("../images/mozaic_1/product_3.JPG"); }
+  background-image: url("../images/creations/nos_creations_3.JPG"); }
 section#products .block-3 .image-4:after {
-  background-image: url("../images/mozaic_1/product_4.JPG"); }
+  background-image: url("../images/creations/nos_creations_4.JPG"); }
 
 section#origins .block-1 .image-1:after {
-  background-image: url("../images/mozaic_items/salade.jpg"); }
+  background-image: url("../images/produits/nos_produits_1.jpg");
+  background-position: center; }
 section#origins .block-1 .image-2:after {
-  background-image: url("../images/mozaic_items/pain.jpg"); }
+  background-image: url("../images/produits/nos_produits_2.jpg"); }
 section#origins .block-2 .image-3:after {
-  background-image: url("../images/mozaic_items/pain.jpg"); }
+  background-image: url("../images/produits/nos_produits_3.jpg"); }
 section#origins .block-3 .image-4:after {
-  background-image: url("../images/mozaic_items/salade.jpg"); }
+  background-image: url("../images/produits/nos_produits_4.jpg"); }
 
 section#menu {
   display: flex;
@@ -227,6 +270,15 @@ section#menu {
   justify-content: center;
   align-items: center;
   padding: 80px 0 40px; }
+  @media (max-width: 550px) {
+    section#menu {
+      padding: 30px 0 40px; } }
+  @media (max-width: 550px) {
+    section#menu h2 {
+      width: 150px;
+      text-align: center; }
+      section#menu h2:after, section#menu h2:before {
+        bottom: 23px; } }
   section#menu .icon-svg {
     padding-bottom: 30px;
     height: 40px;
@@ -258,6 +310,9 @@ section#origins {
   display: flex;
   flex-wrap: wrap;
   padding: 80px 0 40px; }
+  @media (max-width: 550px) {
+    section#origins {
+      padding: 30px 0 40px; } }
 
 section#events {
   display: flex;
@@ -265,20 +320,35 @@ section#events {
   justify-content: center;
   align-items: center;
   padding: 80px 0 40px; }
+  @media (max-width: 550px) {
+    section#events {
+      padding: 30px 0 40px; } }
   section#events .block-1 {
     display: flex; }
+    @media (max-width: 550px) {
+      section#events .block-1 {
+        flex-direction: column; } }
     section#events .block-1 .image {
       width: 33.33333%; }
+      @media (max-width: 550px) {
+        section#events .block-1 .image {
+          width: 100%; } }
       section#events .block-1 .image:after {
         content: "";
         display: block;
         padding-bottom: 100%;
         background-size: cover;
         background-repeat: no-repeat; }
+    @media (max-width: 550px) {
+      section#events .block-1 .image-1 {
+        order: 2; } }
     section#events .block-1 .image-1:after {
-      background-image: url("../images/mozaic_items/pain.jpg"); }
+      background-image: url("../images/evenements/nos_evenements_1.jpg"); }
+    @media (max-width: 550px) {
+      section#events .block-1 .image-2 {
+        order: 3; } }
     section#events .block-1 .image-2:after {
-      background-image: url("../images/mozaic_items/pain.jpg"); }
+      background-image: url("../images/evenements/nos_evenements_2.jpg"); }
     section#events .block-1 .what-we-do {
       display: flex;
       flex-direction: column;
@@ -288,6 +358,10 @@ section#events {
       padding: 0 5%;
       width: 33.33333%;
       text-align: center; }
+      @media (max-width: 550px) {
+        section#events .block-1 .what-we-do {
+          order: 1;
+          width: 100%; } }
   section#events .block-2 {
     display: flex;
     width: 100%; }
@@ -300,24 +374,40 @@ section#events {
         background-size: cover;
         background-repeat: no-repeat; }
     section#events .block-2 .image-3:after {
-      background-image: url("../images/mozaic_items/pain.jpg"); }
+      background-image: url("../images/evenements/nos_evenements_3.jpg");
+      background-position: 71%; }
     section#events .block-2 .image-4:after {
-      background-image: url("../images/mozaic_items/pain.jpg"); }
+      background-image: url("../images/evenements/nos_evenements_4.jpg"); }
 
 section#contact {
   display: flex;
-  padding: 80px 30px 40px; }
+  padding: 80px 90px 40px; }
+  @media (max-width: 550px) {
+    section#contact {
+      flex-direction: column;
+      padding: 30px 0 40px; } }
   section#contact .block {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%; }
+    @media (max-width: 550px) {
+      section#contact .block {
+        width: 100%; } }
   section#contact .contact-map {
+    box-sizing: border-box;
     border: 5px solid #fff;
     border-radius: 2px; }
+    @media (max-width: 550px) {
+      section#contact .contact-map {
+        order: 2; } }
   section#contact .contact-details {
     padding: 0 60px; }
+    @media (max-width: 550px) {
+      section#contact .contact-details {
+        order: 1;
+        padding: 0 0 30px; } }
     section#contact .contact-details p {
       text-align: center; }
     section#contact .contact-details ul {
@@ -333,9 +423,9 @@ section#instagram {
   justify-content: center;
   align-items: center;
   padding: 80px 0 0; }
-  @media (min-width: 550px) {
+  @media (max-width: 550px) {
     section#instagram {
-      padding: 80px 0 0; } }
+      padding: 0; } }
   section#instagram p {
     width: 90%;
     text-align: center; }
@@ -350,6 +440,9 @@ section#instagram {
     section#instagram #instafeed a {
       display: flex;
       width: 20%; }
+      @media (max-width: 550px) {
+        section#instagram #instafeed a {
+          width: 50%; } }
       section#instagram #instafeed a img {
         height: 100%;
         width: 100%; }
@@ -760,6 +853,9 @@ textarea {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
+  @media (max-width: 550px) {
+    .container {
+      padding: 0; } }
 
 .column,
 .columns {
@@ -1320,8 +1416,15 @@ header {
     height: 220px;
     width: 220px;
     transition: all 0.3s ease-in-out; }
+    @media (max-width: 550px) {
+      header .container-logo {
+        height: 160px;
+        width: 160px; } }
     header .container-logo img {
       height: 200px; }
+      @media (max-width: 550px) {
+        header .container-logo img {
+          height: 140px; } }
   header .container-logo.scrolled {
     opacity: 0; }
   header .header-content {
@@ -1329,6 +1432,9 @@ header {
     z-index: 1;
     padding-top: 30px;
     text-align: center; }
+    @media (max-width: 550px) {
+      header .header-content {
+        padding: 30px 20px 0; } }
     header .header-content h1 {
       font-size: 1.9rem;
       text-transform: uppercase;
